@@ -1,0 +1,92 @@
+import java.lang.String;
+
+
+enum gende{
+			M,F;
+		}
+public class lab25 {
+		
+		String fname;
+		String lname;
+		char gender;
+		int phonenum;
+		
+		
+		
+		public lab25(int phonenum) {
+			this.phonenum=phonenum;
+		}
+		public int getPhonenum() {
+			return phonenum;
+		}
+		public void setPhonenum(int phonenum) {
+			this.phonenum = phonenum;
+		}
+		
+		
+		public lab25(String fname, String lname, char gender){
+			this.fname=fname;
+			this.lname=lname;
+			this.gender=gender;
+		}
+		public lab25() {
+			
+		}
+
+		public String getFname() {
+			return fname;
+		}
+
+		public void setFname(String fname) {
+			this.fname = fname;
+		}
+
+		public String getLname() {
+			return lname;
+		}
+
+		public void setLname(String lname) {
+			this.lname = lname;
+		}
+
+		public char getGender() {
+			return gender;
+		}
+
+		public void setGender(char gender) {
+			this.gender = gender;
+		}
+		
+		public static void main(String args[]) {
+			lab25 obj=new lab25();
+			obj.setFname(args[0]);
+			obj.setLname(args[1]);
+			String gen=args[2];
+			char[] g=gen.toCharArray();
+			obj.setGender(g[0]);
+			switch(g[0])
+			{
+			case 'm':
+				System.out.println("Gender is :-"+obj.getGender());
+				break;
+			case 'f':
+				System.out.println("Gender is :-"+obj.getGender());
+				break;
+			default:
+			}
+		
+			
+			
+			int ph=Integer.parseInt(args[3]);
+			obj.setPhonenum(ph);
+
+			System.out.println("first name :"+obj.getFname());
+			System.out.println("last name :"+obj.getLname());
+		/*	System.out.println("gender :"+obj.getGender());*/
+			System.out.println("gender :"+obj.getPhonenum());
+			
+		}
+		
+}
+
+
